@@ -1,8 +1,0 @@
-language: c
-sudo: false #only for faster builds
-script:
- - clang -coverage -O0 reverse_string.c -o reverse_string
- - ./reverse_string
- - gcov reverse_string.c
-after_success:
- - bash <(curl -s https://codecov.io/bash)
