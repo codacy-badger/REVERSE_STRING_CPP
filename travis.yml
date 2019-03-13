@@ -1,5 +1,5 @@
 language: c
-sudo: false
+sudo: false #only for faster builds
 script:
  - clang -coverage -O0 reverse_string.c -o reverse_string
  - ./reverse_string
