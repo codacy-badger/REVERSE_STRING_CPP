@@ -1,6 +1,6 @@
-language:c
-sudo:false
+language: c
+sudo: false
 script:
-- clang -coverage -O0 reverse_string.c -o reverse_string
+ - clang -coverage -O0 reverse_string.c -o reverse_string
 after_success:
  - bash <(curl -s https://codecov.io/bash)
