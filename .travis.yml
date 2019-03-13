@@ -1,6 +1,10 @@
-language: c
-sudo: false #to build faster
+dist: trusty
+sudo: false
+language: cpp
+  
 script:
-- clang -coverage -O0 reverse_string.c -o reverse_string
-after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - cmake 
+
+after_success: 
+export CODECOV_TOKEN="token"
+bash <(curl -s https://codecov.io/bash)
