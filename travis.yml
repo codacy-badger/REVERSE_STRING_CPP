@@ -3,4 +3,4 @@ sudo:false
 script:
 - clang -coverage -O0 reverse_string.c -o reverse_string
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- codecov
